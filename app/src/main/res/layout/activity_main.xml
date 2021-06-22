@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#ED090707">
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="172dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="#80979595"
+        />
+    <ImageView
+        android:id="@+id/profile_imageview"
+        android:layout_width="112dp"
+        android:layout_height="112dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/ic_female_avatar"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="16dp"
+        app:layout_constraintVertical_weight="1"
+        android:background="#B2191515"
+        />
+
+    <TextView
+        android:id="@+id/name_textview"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="Alexis"
+        android:textSize="24sp"
+        android:textColor="#2196F3"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="@+id/profile_imageview"
+        app:layout_constraintStart_toStartOf="@+id/profile_imageview"
+        app:layout_constraintTop_toBottomOf="@id/profile_imageview"
+
+        />
+
+
+
+    <TextView
+        android:id="@+id/chat_textview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/type_editview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/name_textview"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_weight="2.5"
+        android:layout_marginBottom="8dp"
+        android:textColor="#2196F3"/>
+
+    <EditText
+        android:id="@+id/type_editview"
+        android:background="@drawable/type_bt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/send_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:hint="Type here ..."
+        app:layout_constraintHorizontal_weight="2"
+        android:layout_margin="8dp"
+        android:padding="8dp"
+        android:textColor="@color/white"
+        app:layout_constraintVertical_weight="0.5"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/send_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/type_editview"
+        app:layout_constraintHorizontal_weight="1"
+        android:layout_margin="8dp"
+        android:text="Send"
+        android:textColor="@color/white"
+        android:background="@drawable/send_bt"
+        app:layout_constraintVertical_weight="0.5"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
